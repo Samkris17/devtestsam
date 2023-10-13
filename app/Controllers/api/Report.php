@@ -66,7 +66,7 @@ class Report extends BaseApiController
         // $date_to = $builder->db->escape($filters->date_to);
         // ^^ CI 4 Bug ^^
 
-        // beware of sql injection of unescaped user input
+        // injeksi sql dari input pengguna yang tidak lolos
         $between_date = "a.tanggal BETWEEN STR_TO_DATE('{$filters->date_from}', '%Y-%m-%d') AND STR_TO_DATE('{$filters->date_to}', '%Y-%m-%d')";
 
         $builder->where($between_date);
@@ -128,7 +128,7 @@ class Report extends BaseApiController
         // $date_to = $builder->db->escape($filters->date_to);
         // ^^ CI 4 Bug ^^
 
-        // beware of sql injection of unescaped user input
+        // injeksi sql dari input pengguna yang tidak lolos
         $between_date = "a.tanggal BETWEEN STR_TO_DATE('{$filters->date_from}', '%Y-%m-%d') AND STR_TO_DATE('{$filters->date_to}', '%Y-%m-%d')";
 
         $builder->where($between_date);
