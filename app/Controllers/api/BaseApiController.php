@@ -16,7 +16,7 @@ class BaseApiController extends ResourceController
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
-        // Do Not Edit This Line
+        // Jangan Di edit
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
